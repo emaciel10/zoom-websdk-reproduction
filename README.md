@@ -6,6 +6,14 @@ If you try to use the electron WebSDK in a browserWindow and you attempt to shar
 
 If you open this same url in a browser (chrome, firefox, etc.) screensharing will work.
 
+## Steps to reproduce
+
+1. Create a new electron-builder.env file including the necessary APPLE_API_KEY and APPLE_API_ISSUER environment variables
+
+2. Run `npm run build`
+
+3. Install the newly created electron-quick-start.dmg application and see that although video and audio work, screenshare does not. No error message is logged but clicking the screenshare button in the zoom websdk seems to do nothing.
+
 # electron-quick-start
 
 **Clone and run for a quick way to see Electron in action.**
