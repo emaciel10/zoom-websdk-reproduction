@@ -41,7 +41,7 @@
       "helperBundleId": "com.hivetechnology.hive.helper",
       "category": "public.app-category.productivity",
       "identity": "Hive Technology, Incorporated (EF2FKNHD5L)",
-      "artifactName": "HiveInstaller.${ext}",
+      "artifactName": "electron-quick-start.${ext}",
       "type": "distribution",
       "hardenedRuntime": true,
       "gatekeeperAssess": false,
@@ -59,7 +59,7 @@
       "iconUrl": "http://s3.amazonaws.com/hv-public-images/logo-plain.ico"
     },
     "dmg": {
-      "title": "HiveInstaller",
+      "title": "electron-quick-start",
       "sign": false,
       "contents": [
         {
