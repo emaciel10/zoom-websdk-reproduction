@@ -1,0 +1,83 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "clean": "rm -rf dist && rm -rf ./app/node_modules",
+    "install-deps": "electron-builder install-app-deps",
+    "build": "npm run clean && npm run install-deps && electron-builder --mac"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "10.1.0",
+    "electron-builder": "22.8.0"
+  },
+  "build": {
+    "npmRebuild": true,
+    "protocols": {
+      "name": "hive",
+      "schemes": [
+        "hive"
+      ]
+    },
+    "electronVersion": "10.1.0",
+    "appId": "com.hivetechnology.hive",
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "helperBundleId": "com.hivetechnology.hive.helper",
+      "category": "public.app-category.productivity",
+      "identity": "Hive Technology, Incorporated (EF2FKNHD5L)",
+      "artifactName": "HiveInstaller.${ext}",
+      "type": "distribution",
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.plist",
+      "extendInfo": {
+        "NSCameraUsageDescription": "This app requires camera access to record video.",
+        "NSMicrophoneUsageDescription": "This app requires microphone access to record audio."
+      }
+    },
+    "win": {
+      "target": "squirrel"
+    },
+    "squirrelWindows": {
+      "iconUrl": "http://s3.amazonaws.com/hv-public-images/logo-plain.ico"
+    },
+    "dmg": {
+      "title": "HiveInstaller",
+      "sign": false,
+      "contents": [
+        {
+          "x": 600,
+          "y": 250,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 375,
+          "y": 250,
+          "type": "file"
+        }
+      ],
+      "window": {
+        "width": 965,
+        "height": 490
+      }
+    }
+  }
+}
