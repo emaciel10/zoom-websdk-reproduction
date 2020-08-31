@@ -1,3 +1,11 @@
+# Zoom WebSDK Screenshare Reproduction
+
+## Issue
+
+If you try to use the electron WebSDK in a browserWindow and you attempt to share your screen it does not work.
+
+If you open this same url in a browser (chrome, firefox, etc.) screensharing will work.
+
 # electron-quick-start
 
 **Clone and run for a quick way to see Electron in action.**
