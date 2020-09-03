@@ -14,7 +14,7 @@ function createWindow() {
 
   // REPLACE THIS ZOOM MEETING ID TO TEST SHARESCREEN
   // and load zoom
-  mainWindow.loadURL("https://us02web.zoom.us/wc/join/87662804324");
+  mainWindow.loadURL("https://zoom.hive.com?meetingNumber=87662804324");
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
